@@ -1,5 +1,5 @@
-import {Configuration} from "webpack";
-import {BuildOptions} from "./types/types";
+import { Configuration } from 'webpack';
+import { BuildOptions } from './types/types';
 
 export function buildResolvers(options: BuildOptions): Configuration['resolve'] {
     return {
@@ -7,5 +7,5 @@ export function buildResolvers(options: BuildOptions): Configuration['resolve'] 
         alias: {
             '@': options.paths.src,
         },
-    }
+    };
 }

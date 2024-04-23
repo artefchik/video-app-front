@@ -15,7 +15,7 @@ export default (env: EnvVariables) => {
     const mode = env.mode || 'development';
     const port = env.port || 3000;
     const apiUrl = env.apiUrl || 'http://localhost:8000';
-    const analyzer = env.analyzer
+    const {analyzer} = env
     const isDev = mode === 'development';
 
     const paths: BuildPaths = {
