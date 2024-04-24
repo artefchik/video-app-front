@@ -1,3 +1,8 @@
+import { Loader } from '@/shared/ui/Loader/Loader';
+import '@/app/styles/index.scss';
+
 export const App = () => (
-    <div />
+    <div className='app dark'>
+        <Loader />
+    </div>
 );
