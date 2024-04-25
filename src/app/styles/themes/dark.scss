@@ -1,12 +1,22 @@
 .dark {
   //background color
-  --bg-color-primary:#1E1E1EFF;
-  --bg-color-secondary: #262626;
+  //--bg-color-primary: #1E1E1EFF;
+  //--bg-color-secondary: #262626;
 
-  //accent color
-  --color-accent:#409fff;
+
+  --primary-color: #E85B81;
+  --hover-primary-color:#C12F5D;
+
+  --alternative-color:#443DF6;
+  --hover-alternative-color:#5E48E8;
 
   //text color
-  --text-color-primary:#fff;
-  --text-color-secondary:#8e8e8e;
+  --text-color-primary: #505050;
+  --text-color-secondary: #8e8e8e;
+  --text-color-alternative: #F9F9F9;
+
+  --border-color: #B5B5B5;
+  --hover-border-color: #2f2f2f;
+
+  --error-color:#F03D3E;
 }

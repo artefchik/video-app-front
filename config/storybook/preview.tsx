@@ -14,6 +14,12 @@ const preview: Preview = {
         (Story) => (
             Story()
         ),
+        (Story) => (
+            <div className="dark">
+                <Story />
+            </div>
+
+        ),
     ],
 };
 

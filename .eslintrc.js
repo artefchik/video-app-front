@@ -4,7 +4,13 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'prettier', 'plugin:storybook/recommended'],
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended',
+        'prettier',
+        'plugin:storybook/recommended',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -59,7 +65,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
-        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+        'react/jsx-max-props-per-line': ['error', { maximum: 3 }],
         'class-methods-use-this': ['error', { enforceForClassFields: false }],
     },
     globals: {
