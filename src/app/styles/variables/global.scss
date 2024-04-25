@@ -3,11 +3,27 @@
 
   --font-size-s: 14px;
   --font-line-s: 20px;
-  --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+  --line-height-s: var(--font-size-s) / var(--font-line-s);
 
   --font-size-m: 16px;
   --font-line-m: 22px;
-  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+  --line-height-m: var(--font-size-m) / var(--font-line-m);
+
+  --font-size-sm: 22px;
+  --font-line-sm: 30px;
+  --line-height-sm: var(--font-size-sm) / var(--font-line-sm);
+
+  --font-size-l: 30px;
+  --font-line-l: 38px;
+  --line-height-l: var(--font-size-l) / var(--font-line-l);
+
+  --font-size-xl: 38px;
+  --font-line-xl: 42px;
+  --line-height-xl: var(--font-size-xl) / var(--font-line-xl);
+
+  --font-size-xxl: 45px;
+  --font-line-xxl: 52px;
+  --line-height-xxl: var(--font-size-xxl) / var(--font-size-xxl);
   //WEIGHT
   --font-medium: 500;
   --font-semiBold: 600;

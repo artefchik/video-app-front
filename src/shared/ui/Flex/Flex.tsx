@@ -68,7 +68,7 @@ export const Flex = (props: FlexProps) => {
         wrap = false,
         width = false,
         height = false,
-        as = 'div',
+        as: Tag = 'div',
     } = props;
 
     const classes = useMemo(
@@ -82,7 +82,6 @@ export const Flex = (props: FlexProps) => {
         ],
         [align, className, direction, gap, justify, wrap],
     );
-    const Tag = as;
 
     return <Tag className={clsx(cls.Flex, classes)}>{children}</Tag>;
 };
