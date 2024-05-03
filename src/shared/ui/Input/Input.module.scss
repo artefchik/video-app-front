@@ -61,3 +61,34 @@
   color: var(--text-color-primary);
   transform: translateY(-55%);
 }
+
+.password{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  &.view {
+    &::before {
+      content: '';
+      position: absolute;
+      top: -13%;
+      left: 45%;
+      width: 1.5px;
+      height: 20px;
+      transform: rotate(45deg);
+      background-color: var(--text-color-primary);
+      transition: all 0.4s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          background-color: var(--text-color-primary);
+        }
+      }
+    }
+  }
+
+}
+
