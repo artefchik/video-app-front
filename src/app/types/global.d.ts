@@ -10,6 +10,7 @@ declare module '*.png';
 declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.webp';
+declare module '*.mp4';
 declare module '*.svg' {
     import React from 'react';
 
@@ -22,8 +23,8 @@ declare const __API__: string;
 
 type DeepPartial<T> = T extends object
     ? {
-        [P in keyof T]?: DeepPartial<T[P]>;
-    }
+          [P in keyof T]?: DeepPartial<T[P]>;
+      }
     : T;
 
 type OptionalRecord<K extends keyof any, T> = {
@@ -31,4 +32,3 @@ type OptionalRecord<K extends keyof any, T> = {
 };
 
 declare const __ENV__: 'production' | 'development';
-

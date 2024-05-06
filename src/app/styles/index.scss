@@ -1,0 +1,24 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@import "themes/dark";
+@import "variables/global";
+
+.app {
+  font: var(--font-m);
+  background: var(--bg-color-primary);
+  color: var(--text-color-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  main {
+    flex: 1 1 auto;
+}
+}
+
+.lock  {
+  overflow: hidden;
+  touch-action: none;
+}
+
