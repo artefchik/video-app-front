@@ -15,7 +15,9 @@
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "storybook": "storybook dev -p 6007 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "test": "jest --config ./config/jest/jest.config.ts"
+    "test": "jest --config ./config/jest/jest.config.ts",
+    "api:download": "wget http://localhost:8080/api-docs-yaml -O ./src/shared/api/schema.yaml",
+    "api:generated": "orval --config config/orval/orval.config.ts"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
@@ -71,6 +73,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "mini-css-extract-plugin": "^2.9.0",
+    "orval": "^6.28.2",
     "react-refresh": "^0.14.0",
     "react-refresh-typescript": "^2.0.9",
     "sass": "^1.75.0",
@@ -89,6 +92,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
+    "axios": "^1.6.8",
     "clsx": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
