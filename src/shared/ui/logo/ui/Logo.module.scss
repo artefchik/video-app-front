@@ -1,0 +1,36 @@
+.logo {
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  transition: var(--transition-cubic);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 18px;
+    top: 50%;
+    border-radius: var(--border-radius-small);
+    background-color: var(--white-color);
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: 25%;
+  }
+
+  &::after {
+    right: 25%;
+  }
+
+  &:hover {
+    background-color: var(--hover-primary-color);
+  }
+
+}

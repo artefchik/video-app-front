@@ -7,6 +7,7 @@
  */
 import { $api } from './api';
 import type { BodyType } from './api';
+
 export interface User {
     /** E-mail */
     email: string;
