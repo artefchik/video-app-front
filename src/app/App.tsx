@@ -1,15 +1,15 @@
-import { Input } from '@/shared/ui/Input/Input';
-import { useState } from 'react';
-import { Container } from '@/shared/ui/Container/Container';
-import { SignInForm } from '@/features/SignInForm/ui/SignInForm';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { SignInForm } from '@/features/SignInForm';
+import { QueryProvider } from '@/app/providers/queryProvider';
+import { Header } from '@/widgets/header';
 
-export const App = () => {
-    const [value, setValue] = useState('');
-    return (
+export const App = () => (
+    <QueryProvider>
+        {__IS_DEV__ && <ReactQueryDevtools initialIsOpen={false} />}
         <div className="app dark">
-            <Container>
-                <SignInForm />
-            </Container>
+            <Header />
+            <SignInForm />
         </div>
-    );
-};
+    </QueryProvider>
+
+);

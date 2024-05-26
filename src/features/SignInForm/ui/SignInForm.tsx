@@ -1,10 +1,12 @@
 import clsx from 'clsx';
-import cls from './SignInForm.module.scss';
-import { Flex } from '@/shared/ui/Flex/Flex';
 import { Controller, useForm } from 'react-hook-form';
-import { signInSchema, SignInSchema } from '../model/types/SignInSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Input } from '@/shared/ui/Input/Input';
+import { Flex } from '@/shared/ui/flex/ui/Flex';
+import { signInSchema, SignInSchema } from '../model/types/SignInSchema';
+import { Input } from '@/shared/ui/input/ui/Input';
+import cls from './SignInForm.module.scss';
+import { Button } from '@/shared/ui/button/ui/Button';
+import { Typography } from '@/shared/ui/typography/ui/Typography';
 
 interface SignInFormProps {
     className?: string;
@@ -27,29 +29,37 @@ export const SignInForm = (props: SignInFormProps) => {
     });
 
     return (
-        <Flex as="form" className={clsx(cls.SignInForm, className)}>
-            <Controller
-                name="email"
-                control={control}
-                render={({ field }) => (
-                    <Input
-                        label="Email"
-                        error={errors.email?.message}
-                        {...field}
-                    />
-                )}
-            />
-            q
-            <Controller
-                name="password"
-                control={control}
-                render={({ field }) => (
-                    <Input.Password
-                        error={errors.password?.message}
-                        {...field}
-                    />
-                )}
-            />
+
+        <Flex direction="column" gap="15" as="form"
+              className={clsx(cls.SignInForm, className)}>
+
+            <Typography  as="h2" align='center'>
+                Sign In
+            </Typography>
+            <Flex direction='column' gap="20">
+                <Controller
+                    name="email"
+                    control={control}
+                    render={({ field }) => (
+                        <Input
+                            label="Email"
+                            error={errors.email?.message}
+                            {...field}
+                        />
+                    )}
+                />
+                <Controller
+                    name="password"
+                    control={control}
+                    render={({ field }) => (
+                        <Input.Password
+                            error={errors.password?.message}
+                            {...field}
+                        />
+                    )}
+                />
+                <Button>Sign In</Button>
+            </Flex>
         </Flex>
     );
 };

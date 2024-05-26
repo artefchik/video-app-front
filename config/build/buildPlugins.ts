@@ -17,6 +17,7 @@ export function buildPlugins({ mode, paths, analyzer, apiUrl }: BuildOptions): C
         new DefinePlugin({
             __ENV__: JSON.stringify(mode),
             __API__: JSON.stringify(apiUrl),
+            __IS_DEV__:JSON.stringify(isDev)
         }),
 
     ];
