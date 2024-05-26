@@ -1,12 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom';
 import React, { Suspense } from 'react';
 import { getRoutePathAuth, getRoutePathMain } from '@/shared/const/router';
-import { App } from '@/app/App';
 
 export const routeConfig = createBrowserRouter([
     {
-        path:getRoutePathMain(),
-        element: <App />,
+        path: getRoutePathMain(),
+        element: <Suspense fallback="Loading...">
+            <div>make</div>
+        </Suspense>,
     },
     {
         path: getRoutePathAuth(),

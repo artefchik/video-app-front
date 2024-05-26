@@ -1,6 +1,7 @@
 .inputWrapper {
+
   &.error {
-    transition: all 0.4s ease 0s;
+    grid-template-rows: 1fr auto;
 
     .input {
       border-color: var(--error-color);
@@ -11,9 +12,6 @@
     }
 
     .errorText {
-      color: var(--error-color);
-      margin: 5px 0 0 10px;
-      font-size: 12px;
     }
   }
 }
@@ -62,6 +60,13 @@
   background-color: #fff;
   color: var(--text-color-primary);
   transform: translateY(-55%);
+}
+
+.errorText {
+  color: var(--error-color);
+  margin: 5px 0 0 10px;
+  font-size: 12px;
+  transition: var(--transition-ease);
 }
 
 .password {

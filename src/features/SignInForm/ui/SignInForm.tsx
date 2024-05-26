@@ -1,12 +1,14 @@
 import clsx from 'clsx';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Flex } from '@/shared/ui/flex/ui/Flex';
 import { signInSchema, SignInSchema } from '../model/types/SignInSchema';
 import { Input } from '@/shared/ui/input/ui/Input';
 import cls from './SignInForm.module.scss';
 import { Button } from '@/shared/ui/button/ui/Button';
-import { Typography } from '@/shared/ui/typography/ui/Typography';
+import { Typography } from '@/shared/ui/typography';
+import { InputPassword } from '@/shared/ui/input';
+import { Flex } from '@/shared/ui/flex';
+
 
 interface SignInFormProps {
     className?: string;
@@ -37,6 +39,7 @@ export const SignInForm = (props: SignInFormProps) => {
                 Sign In
             </Typography>
             <Flex direction='column' gap="20">
+
                 <Controller
                     name="email"
                     control={control}
@@ -52,7 +55,7 @@ export const SignInForm = (props: SignInFormProps) => {
                     name="password"
                     control={control}
                     render={({ field }) => (
-                        <Input.Password
+                        <InputPassword
                             error={errors.password?.message}
                             {...field}
                         />

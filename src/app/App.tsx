@@ -1,15 +1,8 @@
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { SignInForm } from '@/features/SignInForm';
-import { QueryProvider } from '@/app/providers/queryProvider';
-import { Header } from '@/widgets/header';
+import { Providers } from './providers';
+import { AppRouter } from './router';
 
 export const App = () => (
-    <QueryProvider>
-        {__IS_DEV__ && <ReactQueryDevtools initialIsOpen={false} />}
-        <div className="app dark">
-            <Header />
-            <SignInForm />
-        </div>
-    </QueryProvider>
-
+    <Providers>
+        <AppRouter/>
+    </Providers>
 );

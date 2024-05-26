@@ -1,1 +1,1 @@
-export { QueryProvider } from './ui/QueryProvider';
+export { queryClient } from './config/queryClient';

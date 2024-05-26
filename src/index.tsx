@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import '@/app/styles/index.scss';
-import { RouteProvider } from '@/app/providers/router';
+import { App } from '@/app/App';
 
 const root = document.getElementById('root');
 
@@ -11,6 +11,5 @@ if (!root) {
 const container = createRoot(root);
 
 container.render(
-    <RouteProvider/>
-
+    <App />,
 );

@@ -1,9 +1,6 @@
-import { InputHTMLAttributes, ReactNode, useState } from 'react';
+import { forwardRef, InputHTMLAttributes, ReactNode, useState } from 'react';
 import clsx from 'clsx';
 import cls from './Input.module.scss';
-import { Button } from '@/shared/ui/button/ui/Button';
-import { SvgIcon } from '@/shared/ui/svgIcon/SvgIcon';
-import view from '@/shared/assets/icons/view.svg';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
@@ -20,7 +17,7 @@ export interface InputProps extends HTMLInputProps {
     after?: ReactNode;
 }
 
-export const Input = (props: InputProps) => {
+export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     const {
         className,
         value,
@@ -49,6 +46,7 @@ export const Input = (props: InputProps) => {
                     </label>
                 )}
                 <input
+                    ref={ref}
                     id={label}
                     className={cls.input}
                     onChange={onChangeHandler}
@@ -61,29 +59,5 @@ export const Input = (props: InputProps) => {
             {!!error && <span className={cls.errorText}>{error}</span>}
         </div>
     );
-};
-
-Input.Password = function InputPassword(props: InputProps) {
-    const [isShowPassword, setIsShowPassword] = useState(true);
-
-    const onClickHandler = () => {
-        setIsShowPassword((prevState) => !prevState);
-    };
-
-    return (
-        <Input
-            {...props}
-            label="Password"
-            type={isShowPassword ? 'password' : 'text'}
-            after={
-                <Button
-                    theme="clear"
-                    onClick={onClickHandler}
-                    className={clsx(cls.password, isShowPassword && cls.view)}
-                >
-                    <SvgIcon Svg={view} />
-                </Button>
-            }
-        />
-    );
-};
+});
+//
